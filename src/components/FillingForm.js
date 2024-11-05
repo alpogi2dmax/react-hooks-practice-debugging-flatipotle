@@ -6,6 +6,11 @@ import pintoBeans from "../images/fillings/pinto-beans.png";
 import whiteRice from "../images/fillings/white-rice.png";
 
 function FillingForm(props) {
+
+  function handleChange(e) {
+    props.handleOnChange(e)
+  }
+
   return (
     <>
       <h1>
@@ -20,7 +25,7 @@ function FillingForm(props) {
               value="White Rice"
               name="fillings"
               checked={props.fillings.includes("White Rice")}
-              onChange={props.handleChange}
+              onChange={handleChange}
             />
             <img
               src={whiteRice}
@@ -40,7 +45,7 @@ function FillingForm(props) {
               value="Brown Rice"
               name="fillings"
               checked={props.fillings.includes("Brown Rice")}
-              onChange={props.handleChange}
+              onChange={handleChange}
             />
             <img
               src={brownRice}
@@ -60,7 +65,7 @@ function FillingForm(props) {
               value="Black Beans"
               name="fillings"
               checked={props.fillings.includes("Black Beans")}
-              onChange={props.handleChange}
+              onChange={handleChange}
             />
             <img
               src={blackBeans}
@@ -80,7 +85,7 @@ function FillingForm(props) {
               value="Pinto Beans"
               name="fillings"
               checked={props.fillings.includes("Pinto Beans")}
-              onChange={props.handleChange}
+              onChange={handleChange}
             />
             <img
               src={pintoBeans}
@@ -100,7 +105,7 @@ function FillingForm(props) {
               value="Fajita Veggies"
               name="fillings"
               checked={props.fillings.includes("Fajita Veggies")}
-              onChange={props.handleChange}
+              onChange={handleChange}
             />
             <img
               src={fajitaVeg}

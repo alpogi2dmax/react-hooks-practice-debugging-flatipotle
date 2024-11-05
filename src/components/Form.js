@@ -11,11 +11,12 @@ const DEFAULT_STATE = {
   sides: [],
 };
 
-function Form() {
+function Form(props) {
   const [formState, setFormState] = useState(DEFAULT_STATE);
 
-  function handleSubmit() {
+  function handleSubmit(event) {
     event.preventDefault();
+    //go back and check....
     props.addOrder(formState);
 
     setFormState({
@@ -24,7 +25,8 @@ function Form() {
     event.target.reset();
   }
 
-  function handleChange() {
+    //go back and check...
+  function handleChange(event) {
     const itemType = event.target.name;
     const item = event.target.value;
 
@@ -40,6 +42,8 @@ function Form() {
       });
     }
   }
+
+  console.log(formState)
 
   return (
     <div className="ui raised container segment">
